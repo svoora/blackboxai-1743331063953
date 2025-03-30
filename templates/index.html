@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABAC System Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Attribute-Based Access Control System</h1>
+            <p class="text-gray-600">Manage and test access policies</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Database Policy Card -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-database text-blue-500 text-2xl mr-3"></i>
+                    <h2 class="text-xl font-semibold">Database Policies</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Manage database access control rules</p>
+                <a href="/database_policies.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded inline-block">
+                    Manage Policies
+                </a>
+            </div>
+
+            <!-- API Policy Card -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-code text-green-500 text-2xl mr-3"></i>
+                    <h2 class="text-xl font-semibold">API Policies</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Manage API endpoint access rules</p>
+                <a href="/api_policies.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded inline-block">
+                    Manage Policies
+                </a>
+            </div>
+
+            <!-- Policy Tester Card -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-vial text-purple-500 text-2xl mr-3"></i>
+                    <h2 class="text-xl font-semibold">Policy Tester</h2>
+                </div>
+                <p class="text-gray-600 mb-4">Test policies with different scenarios</p>
+                <a href="/policy_preview.html" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded inline-block">
+                    Test Policies
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-8 bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">System Status</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="status-cards">
+                <!-- Status cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
